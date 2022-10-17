@@ -1,0 +1,108 @@
+@import "~normalize.css";
+
+body {
+	position: relative;
+	font-family: "Merriweather", serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+	color: #343030;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 24px;
+}
+h2 {
+	font-weight: 400;
+	font-size: 18px;
+}
+h3 {
+	font-weight: 700;
+	font-size: 16px;
+}
+h4 {
+	font-weight: 700;
+	font-size: 16px;
+}
+h5 {
+	font-weight: 400;
+	font-size: 16px;
+}
+h6 {
+	font-weight: 300;
+	font-size: 14px;
+}
+
+input,
+textarea,
+select {
+	border: 1px solid #e1e1e1;
+	&:focus {
+		border-color: #b5b5b5;
+	}
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+ul,
+li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1276px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+button {
+	height: 48px;
+	min-width: 118px;
+
+	padding: 14px 9px;
+
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 150%;
+	color: #f4f6f9;
+
+	background: #382e2b;
+	border: none;
+	cursor: pointer;
+	transition: ease all 0.2s;
+	&:hover {
+		background: #776763;
+		transition: ease all 0.2s;
+	}
+}
+
+@import "navbar";
+@import "header";
+@import "main";
+@import "card";
+@import "footer";
+@import "modal";
+@import "mobileMenu";
+@import "media";

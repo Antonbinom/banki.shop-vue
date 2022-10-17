@@ -1,0 +1,24 @@
+.footer {
+	background: #eceaea;
+	color: #555555;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 96px;
+	}
+	&__contacts {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 496px;
+		&-item {
+			display: flex;
+			align-items: center;
+			& a {
+				margin-left: 8px;
+			}
+		}
+	}
+}

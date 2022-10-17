@@ -1,0 +1,28 @@
+.navbar {
+	margin-left: 96px;
+	margin-right: 60px;
+	max-width: 542px;
+	width: 100%;
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__mobile {
+		position: absolute;
+		background: #403434;
+		padding: 30px;
+		left: 0;
+		right: 0;
+		top: 88px;
+		z-index: 1000;
+		color: #ffffff;
+		&-list {
+			text-align: center;
+			& .navbar-item {
+				font-size: 16px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

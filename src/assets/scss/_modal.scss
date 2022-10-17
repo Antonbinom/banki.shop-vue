@@ -1,0 +1,56 @@
+.modal {
+	.modal-overlay {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		background: #000;
+		opacity: 0.5;
+	}
+	&__content {
+		position: absolute;
+		padding: 50px 20px;
+		top: 50%;
+		left: 50%;
+		z-index: 100;
+		width: 700px;
+		transform: translate(-50%, -50%);
+		background: #403433;
+		color: #ffffff;
+	}
+	&__info {
+		margin-bottom: 20px;
+	}
+	&-title {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	&-description {
+		font-weight: 400;
+		font-size: 16px;
+	}
+	&-price-old {
+		text-decoration-line: line-through;
+	}
+	&-price-new {
+		font-size: 21px;
+	}
+	&-close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #ffffff;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		font-size: 21px;
+
+		color: #5b3a32;
+		cursor: pointer;
+	}
+}
