@@ -13,7 +13,7 @@ module.exports = {
 	output: {
 		filename: 'main.js',
 		path: path.join(__dirname, 'dist'),
-		publicPath: "/"
+		publicPath: "./"
 
 	},
 	resolve: {
@@ -100,5 +100,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: "./public/index.html"
 		})],
-
+	devServer: {
+		historyApiFallback: true
+	}
 };
