@@ -11,8 +11,10 @@ module.exports = {
 		path.resolve(__dirname, "./src/main.js")
 	].filter(Boolean),
 	output: {
-		path: path.resolve(__dirname, 'dist'),
-		publicPath: "./"
+		filename: 'main.js',
+		path: path.join(__dirname, 'dist'),
+		publicPath: "/"
+
 	},
 	resolve: {
 		alias: {
