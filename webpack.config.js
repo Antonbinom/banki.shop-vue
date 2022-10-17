@@ -2,16 +2,22 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {VueLoaderPlugin} = require("vue-loader");
+const {env} = require("process");
 
 module.exports = {
-	mode: 'development',
-	entry: './src/main.js',
+	mode: env.prod ? "production" : "development",
+	entry: [
+		require.resolve(`webpack-dev-server/client`),
+		path.resolve(__dirname, "./src/main.js")
+	].filter(Boolean),
 	output: {
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist'),
+		publicPath: "/dist/"
 	},
 	resolve: {
 		alias: {
 			components: path.resolve(__dirname, 'src/components'),
+			vue: "@vue/runtime-dom"
 		},
 		extensions: [".wasm", ".mjs", ".js", ".jsx", ".ts", ".tsx", ".json", ".vue"],
 	},
@@ -22,6 +28,14 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			{
+				test: /\.png$/,
+				use: {
+					loader: "url-loader",
+					options: {limit: 8192}
+				}
+			},
+
 			{
 				test: /\.scss$/,
 				use: [{
@@ -77,8 +91,11 @@ module.exports = {
 		]
 	},
 	plugins: [new VueLoaderPlugin(),
-	new MiniCssExtractPlugin(),
+	new MiniCssExtractPlugin({
+		filename: "[name].css"
+	}),
 	new HtmlWebpackPlugin({
 		template: "./public/index.html"
-	})]
+	})],
+
 };
