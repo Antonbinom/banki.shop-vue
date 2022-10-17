@@ -12,7 +12,7 @@ module.exports = {
 	].filter(Boolean),
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		publicPath: "/dist/"
+		publicPath: "./"
 	},
 	resolve: {
 		alias: {
