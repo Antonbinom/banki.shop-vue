@@ -17,7 +17,7 @@ module.exports = {
 	resolve: {
 		alias: {
 			components: path.resolve(__dirname, 'src/components'),
-			vue: "@vue/runtime-dom"
+			vue: "@vue/runtime-dom",
 		},
 		extensions: [".wasm", ".mjs", ".js", ".jsx", ".ts", ".tsx", ".json", ".vue"],
 	},
@@ -90,12 +90,13 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [new VueLoaderPlugin(),
-	new MiniCssExtractPlugin({
-		filename: "[name].css"
-	}),
-	new HtmlWebpackPlugin({
-		template: "./public/index.html"
-	})],
+	plugins: [
+		new VueLoaderPlugin(),
+		new MiniCssExtractPlugin({
+			filename: "[name].css"
+		}),
+		new HtmlWebpackPlugin({
+			template: "./public/index.html"
+		})],
 
 };
