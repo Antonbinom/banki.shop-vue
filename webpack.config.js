@@ -8,13 +8,12 @@ module.exports = {
 	mode: env.prod ? "production" : "development",
 	entry: [
 		require.resolve(`webpack-dev-server/client`),
-		path.resolve(__dirname, "./src/main.js")
-	],
-	// .filter(Boolean),
+		path.resolve(__dirname, "src/main.js")
+	].filter(Boolean),
 	output: {
 		filename: 'main.js',
 		path: path.join(__dirname, 'dist'),
-		publicPath: "./"
+		// publicPath: "./"
 
 	},
 	resolve: {
@@ -25,19 +24,19 @@ module.exports = {
 		extensions: [".wasm", ".mjs", ".js", ".jsx", ".ts", ".tsx", ".json", ".vue"],
 	},
 	devServer: {
-		static: {directory: path.join(__dirname, "dist")},
+		static: {directory: path.join(__dirname, "public")},
 		port: 9000,
 		open: true,
 	},
 	module: {
 		rules: [
-			// {
-			// 	test: /\.png$/,
-			// 	use: {
-			// 		loader: "url-loader",
-			// 		options: {limit: 8192}
-			// 	}
-			// },
+			{
+				test: /\.png$/,
+				use: {
+					loader: "url-loader",
+					options: {limit: 8192}
+				}
+			},
 
 			{
 				test: /\.scss$/,
