@@ -24,11 +24,11 @@ module.exports = {
 		},
 		extensions: [".wasm", ".mjs", ".js", ".jsx", ".ts", ".tsx", ".json", ".vue"],
 	},
-	// devServer: {
-	// 	static: {directory: path.join(__dirname, "dist")},
-	// 	port: 9000,
-	// 	open: true,
-	// },
+	devServer: {
+		static: {directory: path.join(__dirname, "dist")},
+		port: 9000,
+		open: true,
+	},
 	module: {
 		rules: [
 			// {
@@ -101,7 +101,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: "./public/index.html"
 		})],
-	devServer: {
-		historyApiFallback: true
-	}
+	// devServer: {
+	// 	historyApiFallback: true
+	// }
 };
