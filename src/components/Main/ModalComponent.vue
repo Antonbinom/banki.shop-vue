@@ -1,7 +1,7 @@
 <template>
   <div class="modal">
     <div class="modal-overlay" @click="onClose"></div>
-    <div class="modal__content">
+    <div class="modal__content" :style="{ top: `${position}px` }">
       <div class="modal-close" @click="onClose">x</div>
       <div class="modal__info">
         <h1 class="modal-title">{{ info.name }}</h1>
@@ -40,6 +40,9 @@ export default {
     info: {
       type: Object,
       require: true
+    },
+    position: {
+      type: Number
     }
   },
   methods: {

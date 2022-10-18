@@ -1,9 +1,10 @@
 <template>
-  <div v-if="card.sale" class="card">
+  <div v-if="card.sale" class="card" @click="getPosition($event)">
     <teleport to="body">
       <modal-component
         @onClick="isModalOpen = false"
         :info="card"
+        :position="modalPosition"
         v-if="isModalOpen"
       />
     </teleport>
@@ -77,7 +78,8 @@ import ModalComponent from './ModalComponent.vue'
 export default {
   data() {
     return {
-      isModalOpen: false
+      isModalOpen: false,
+      modalPosition: ''
     }
   },
   props: {
@@ -99,6 +101,9 @@ export default {
           this.$store.dispatch('setCartStatus', [id, 'Купить'])
         }, 1000)
       }
+    },
+    getPosition(event) {
+      this.modalPosition = event.target.offsetTop + 200
     }
   },
   components: { PreloaderComponent, ModalComponent }
