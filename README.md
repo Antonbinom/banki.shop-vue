@@ -23,7 +23,7 @@
 - Swiper Slider
 - SCSS
 
-## Запуск npm run start
-## Билд
+## Запуск yarn start
+## Билд yarn build
 
 ## <a href="https://antonbinom.github.io/banki.shop-vue/dist/">Ссылка</a>
