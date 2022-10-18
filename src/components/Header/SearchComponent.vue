@@ -6,12 +6,17 @@
       type="text"
       placeholder="Поиск по названию картины"
     />
-    <button class="form-btn" type="submit">Найти</button>
+    <button v-if="width > 576" class="form-btn" type="submit">Найти</button>
   </form>
 </template>
 
 <script>
 export default {
+  props: {
+    width: {
+      type: Number
+    }
+  },
   computed: {
     searchValue: {
       set(value) {
@@ -24,23 +29,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.form {
-  position: relative;
-  height: 48px;
-  width: 416px;
-  &-input {
-    height: 100%;
-    width: 100%;
-    padding: 13px 16px 14px;
-    outline: none;
-  }
-  &-btn {
-    position: absolute;
-    right: 0;
-    background: #403432;
-    min-width: 122px;
-  }
-}
-</style>

@@ -23,3 +23,21 @@
 		background-color: #fff;
 	}
 }
+
+.form {
+	position: relative;
+	height: 48px;
+	width: 416px;
+	&-input {
+		height: 100%;
+		width: 100%;
+		padding: 13px 16px 14px;
+		outline: none;
+	}
+	&-btn {
+		position: absolute;
+		right: 0;
+		background: #403432;
+		min-width: 122px;
+	}
+}

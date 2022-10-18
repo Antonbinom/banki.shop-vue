@@ -4,7 +4,7 @@
       <div class="header__wrapper">
         <navbar-component v-if="width > 576" />
         <burger-button-component v-if="width < 576" @click="openMenu" />
-        <search-component />
+        <search-component :width="width" />
         <mobile-menu-component v-if="isOpenMenu" />
       </div>
     </div>
