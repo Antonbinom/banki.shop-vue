@@ -1,4 +1,4 @@
-# <a href="https://antonbinom.github.io/banki.shop-vue/dist/">Ссылка</a>
+# <a href="https://antonbinom.github.io/banki.shop-vue/dist/">Ссылка на сайт</a>
 
 ## Описание
 
