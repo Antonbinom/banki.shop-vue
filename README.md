@@ -26,4 +26,4 @@
 ## Запуск npm run start
 ## Билд
 
-## <a href="">Ссылка</a>
+## <a href="https://antonbinom.github.io/banki.shop-vue/dist/">Ссылка</a>
